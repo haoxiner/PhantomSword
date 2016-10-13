@@ -44,8 +44,10 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Entity0.h" />
     <ClInclude Include="EntityRenderer.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Loader.h" />

@@ -1,17 +1,17 @@
 #pragma once
-#include "TexturedModel.h"
-#include <glm/glm.hpp>
+#include "Component.h"
 #include <vector>
+#include <set>
+#include <string>
 class Entity
 {
 public:
-  Entity(const TexturedModel *model, const glm::vec3 &position, const glm::vec3 &rotation, const float scale);
-  ~Entity();
-  void Move(float dx, float dy, float dz);
-  const TexturedModel *model_;
-  glm::vec3 position_;
-  glm::vec3 rotation_;
-  float scale_;
-  std::vector<glm::mat4> *bones_;
+  inline std::vector<Component*> &GetComponents() { return components_; }
+  inline bool CheckSystem(const std::string &system) const { return relatedSystems_.find(system) != relatedSystems_.end(); }
+protected:
+  inline void Add(Component *component) { components_.push_back(component); }
+  inline void Register(const std::string &system) { relatedSystems_.insert(system); }
+private:
+  std::vector<Component*> components_;
+  std::set<const std::string> relatedSystems_;
 };
-
