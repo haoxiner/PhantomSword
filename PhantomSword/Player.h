@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "PositionComponent.h"
 #include "MoveComponent.h"
+#include "ModelComponent.h"
 
 class Player : public Entity
 {
@@ -11,4 +12,5 @@ public:
 private:
   PositionComponent *positionComponent_;
   MoveComponent *moveComponent_;
+  ModelComponent *modelComponent_;
 };

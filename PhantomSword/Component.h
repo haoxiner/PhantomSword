@@ -1,4 +1,6 @@
 #pragma once
+class Entity;
+
 class Component
 {
 public:
@@ -6,9 +8,11 @@ public:
   {
     POSITION = 0,
     MOVE,
+    MODEL,
     NUM_OF_COMPONENTS
   };
-  virtual ComponentType GetType() = 0;
+  Entity *entity_;
+protected:
+  Component() {}
 private:
-  Component(){}
 };

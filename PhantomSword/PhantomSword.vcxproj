@@ -19,18 +19,37 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="MoveSystem.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RawModel.cpp" />
+    <ClCompile Include="RenderSystem.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="StaticShader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Components.h" />
+    <ClInclude Include="Display.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Loader.h" />
+    <ClInclude Include="ModelComponent.h" />
     <ClInclude Include="MoveComponent.h" />
+    <ClInclude Include="MoveSystem.h" />
+    <ClInclude Include="OpenGLHeader.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PositionComponent.h" />
+    <ClInclude Include="RawModel.h" />
     <ClInclude Include="RenderSystem.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="StaticShader.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

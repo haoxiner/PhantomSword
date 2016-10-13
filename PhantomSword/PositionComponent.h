@@ -5,9 +5,7 @@
 class PositionComponent : public Component
 {
 public:
-  PositionComponent();
-  ~PositionComponent();
-  virtual ComponentType GetType() { return POSITION; }
+  static const ComponentType TYPE = POSITION;
 private:
   glm::vec3 position_;
   float rotateX_, rotateY_, rotateZ_;

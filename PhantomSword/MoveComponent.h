@@ -5,8 +5,6 @@
 class MoveComponent : public Component
 {
 public:
-  MoveComponent();
-  ~MoveComponent();
-  virtual ComponentType GetType() { return MOVE; }
+  static const ComponentType TYPE = MOVE;
   glm::vec3 velocity_;
 };

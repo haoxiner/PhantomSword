@@ -1,9 +1,8 @@
 #pragma once
 #include "System.h"
-class RenderSystem : public System
+class MoveSystem : public System
 {
 public:
   virtual void Update(float deltaTime);
 private:
-
 };

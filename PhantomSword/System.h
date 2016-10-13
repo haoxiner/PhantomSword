@@ -2,9 +2,6 @@
 class System
 {
 public:
-  System();
-  ~System();
-
+  virtual void Update(float deltaTime) = 0;
 private:
-
 };

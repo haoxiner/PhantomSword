@@ -1,5 +1,4 @@
 #pragma once
-#include "Component.h"
 #include "PositionComponent.h"
 #include "MoveComponent.h"
 #include "Components.h"
@@ -10,18 +9,18 @@
 class Entity
 {
 public:
-  virtual void Update(float deltaTime);
-  template<class T> void AddComponent(T component)
+  virtual void Update(float deltaTime) = 0;
+  template<class T> void AddComponent(T *component)
   {
-    assert(componentIndices_[T.GetType()] != -1);
-    componentIndices_[T.GetType()] = components_.Add<T>(component);
+    component->entity_ = this;
+    components_.push_back(component);
+    componentIndices_[T::TYPE] = components_.size() - 1;
   }
 protected:
-  template<class T> inline T *GetComponent() {
-    assert(componentIndices_[T.GetType()] != -1);
-    return components_.Get<T>(componentIndices_[T.GetType()]);
+  template<class T> T *GetComponent() {
+    return reinterpret_cast<T*>(components_[componentIndices_[T::TYPE]]);
   }
 private:
   int componentIndices_[Component::NUM_OF_COMPONENTS];
-  static Components components_;
+  std::vector<Component*> components_;
 };

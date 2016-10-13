@@ -2,7 +2,9 @@
 
 Player::Player()
 {
+  positionComponent_ = GetComponent<PositionComponent>();
   moveComponent_ = GetComponent<MoveComponent>();
+  modelComponent_ = GetComponent<ModelComponent>();
 }
 
 void Player::Update(float deltaTime)

@@ -6,10 +6,10 @@
 class Engine
 {
 public:
-  Engine();
-  ~Engine();
+  void Update(float deltaTime);
   void Add(Entity *entity) { entities_.push_back(entity); }
   void Add(System *system) { systems_.push_back(system); }
+  void Remove(Entity *entity);
 private:
   std::vector<Entity*> entities_;
   std::vector<System*> systems_;
