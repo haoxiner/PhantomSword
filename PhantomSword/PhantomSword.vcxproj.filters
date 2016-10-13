@@ -22,141 +22,45 @@
     <Filter Include="头文件\Entities">
       <UniqueIdentifier>{3c7235c9-7c25-4a55-a9a7-0ac2837a3439}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Systems">
+      <UniqueIdentifier>{e01e52cd-9bcc-423a-88cc-2542941445be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Display.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityRenderer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="InputHandler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Loader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MasterRenderer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ModelTexture.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveCameraForward.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="PointLight.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="RawModel.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="StaticShader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Terrain.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TerrainRenderer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TerrainShader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestAnim.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestGame.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TexturedModel.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerShader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Command.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Display.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityRenderer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="InputHandler.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Loader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MasterRenderer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ModelTexture.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveCameraForward.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenGLHeader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PointLight.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="RawModel.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StaticShader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Terrain.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TerrainRenderer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TerrainShader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TexturedModel.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerShader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>头文件\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Entity0.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>头文件\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionComponent.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveComponent.h">
+      <Filter>头文件\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>头文件\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>头文件\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>头文件\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>头文件\Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

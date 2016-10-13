@@ -1,10 +1,11 @@
 #include "Player.h"
 
-Player::Player(const TexturedModel *model, const glm::vec3 &position, const glm::vec3 &rotation, const float scale)
-  :Entity(model, position, rotation, scale)
+Player::Player()
 {
+  moveComponent_ = GetComponent<MoveComponent>();
 }
 
-Player::~Player()
+void Player::Update(float deltaTime)
 {
+  moveComponent_->velocity_ = glm::vec3(0.0f, 0.0f, -1.0f);
 }

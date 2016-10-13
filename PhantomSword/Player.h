@@ -1,9 +1,14 @@
 #pragma once
 #include "Entity.h"
+#include "PositionComponent.h"
+#include "MoveComponent.h"
+
 class Player : public Entity
 {
 public:
-  Player(const TexturedModel *model, const glm::vec3 &position, const glm::vec3 &rotation, const float scale);
-  ~Player();
+  Player();
+  virtual void Update(float deltaTime);
+private:
+  PositionComponent *positionComponent_;
+  MoveComponent *moveComponent_;
 };
-

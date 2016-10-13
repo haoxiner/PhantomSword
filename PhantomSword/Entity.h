@@ -1,17 +1,27 @@
 #pragma once
 #include "Component.h"
+#include "PositionComponent.h"
+#include "MoveComponent.h"
+#include "Components.h"
 #include <vector>
 #include <set>
 #include <string>
+
 class Entity
 {
 public:
-  inline std::vector<Component*> &GetComponents() { return components_; }
-  inline bool CheckSystem(const std::string &system) const { return relatedSystems_.find(system) != relatedSystems_.end(); }
+  virtual void Update(float deltaTime);
+  template<class T> void AddComponent(T component)
+  {
+    assert(componentIndices_[T.GetType()] != -1);
+    componentIndices_[T.GetType()] = components_.Add<T>(component);
+  }
 protected:
-  inline void Add(Component *component) { components_.push_back(component); }
-  inline void Register(const std::string &system) { relatedSystems_.insert(system); }
+  template<class T> inline T *GetComponent() {
+    assert(componentIndices_[T.GetType()] != -1);
+    return components_.Get<T>(componentIndices_[T.GetType()]);
+  }
 private:
-  std::vector<Component*> components_;
-  std::set<const std::string> relatedSystems_;
+  int componentIndices_[Component::NUM_OF_COMPONENTS];
+  static Components components_;
 };
