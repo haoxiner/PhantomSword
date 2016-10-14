@@ -66,12 +66,12 @@ int WINAPI wWinMain(
 
   Engine engine;
   Player player;
-  engine.Add(&player);
-  player.AddComponent(modelComponent);
-  player.AddComponent(positionComponent);
-  player.AddComponent(moveComponent);
-  engine.Add(new RenderSystem());
-  engine.Add(new MoveSystem());
+  engine.AddEntity(&player);
+  player.AddComponent(&modelComponent);
+  player.AddComponent(&positionComponent);
+  player.AddComponent(&moveComponent);
+  engine.AddSystem(new RenderSystem());
+  engine.AddSystem(new MoveSystem());
   
   while (display.IsRunning())
   {

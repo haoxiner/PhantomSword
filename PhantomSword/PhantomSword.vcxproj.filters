@@ -89,9 +89,6 @@
     <ClInclude Include="Entity.h">
       <Filter>头文件\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Components.h">
-      <Filter>头文件\Components</Filter>
-    </ClInclude>
     <ClInclude Include="PositionComponent.h">
       <Filter>头文件\Components</Filter>
     </ClInclude>

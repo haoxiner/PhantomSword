@@ -1,4 +1,5 @@
 #pragma once
+// include entity.h caused a dependent loop
 class Entity;
 
 class Component

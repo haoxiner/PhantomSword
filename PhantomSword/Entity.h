@@ -1,10 +1,7 @@
 #pragma once
 #include "PositionComponent.h"
 #include "MoveComponent.h"
-#include "Components.h"
-#include <vector>
-#include <set>
-#include <string>
+#include <map>
 
 class Entity
 {
@@ -12,15 +9,15 @@ public:
   virtual void Update(float deltaTime) = 0;
   template<class T> void AddComponent(T *component)
   {
+    assert(components_.find(T::TYPE) != components_.endl());
     component->entity_ = this;
-    components_.push_back(component);
-    componentIndices_[T::TYPE] = components_.size() - 1;
+    components_[T::TYPE] = component;
   }
 protected:
   template<class T> T *GetComponent() {
-    return reinterpret_cast<T*>(components_[componentIndices_[T::TYPE]]);
+    assert(components_.find(T::TYPE) != components_.endl());
+    return reinterpret_cast<T*>(components_[T::TYPE]);
   }
 private:
-  int componentIndices_[Component::NUM_OF_COMPONENTS];
-  std::vector<Component*> components_;
+  std::map<Component::ComponentType,Component*> components_;
 };
